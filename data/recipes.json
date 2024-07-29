@@ -1,0 +1,29 @@
+[
+  {
+    "name": "sandwich",
+    "preparationTime": 10,
+    "img": "sandwich.jpg",
+    "ingredients": ["pain", "fromage", "jambon", "salade"]
+  },
+  {
+    "name": "pancakes",
+    "preparationTime": 20,
+    "img": "pancakes.jpg",
+    "author": "Lady Cakes",
+    "ingredients": ["farine", "oeuf", "sucre", "levure"]
+  },
+  {
+    "name": "tartiflette",
+    "preparationTime": 40,
+    "img": "tartiflette.jpg",
+    "author": "John Reblochon",
+    "ingredients": ["patates", "oignon", "reblochon", "lardon"]
+  },
+  {
+    "name": "guacamole",
+    "preparationTime": 20,
+    "img": "guacamole.jpg",
+    "author": "Alberto the Avocado",
+    "ingredients": ["avocat", "tomate", "huile", "oignons", "épices"]
+  }
+]

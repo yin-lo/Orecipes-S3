@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- attention lui préciser le chemin relatif par rapport au dossier public -->
+    <!-- le navigateur va appeler le fichier sur la requete http://localohost:3000/css/style.css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- le navigateur va appeler le fichier sur la requete http://localohost:3000/js/front.js -->
+    <script src="/js/front.js"></script>
+    <title>document</title>
+</head>
+
+<body>
+
+    <%= JSON.stringify(locals) %>
+        <header>
+            <h1>
+                <%= h1 %>
+            </h1>
+
+            <nav>
+                <ul>
+                    <!-- link correspond au élément du tableau navigation envoyé par la route get / -->
+                    <% for (const link of navigation) { %>
+                        <% if (link==='home' ) {%>
+                            <li>
+                                <a href="/">
+                                    <%= link %>
+                                </a>
+
+                            </li>
+                            <% } else { %>
+                                <li>
+                                    <a href="/<%= link %>">
+                                        <%= link %>
+                                    </a>
+
+                                </li>
+                                <%}%>
+                                    <% } %>
+                </ul>
+            </nav>
+        </header>

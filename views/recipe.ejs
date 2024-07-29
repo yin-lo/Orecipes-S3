@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %>
+
+    <main>
+
+        <div class="recipe__container">
+            <img src="/img/<%= foundRecipe.img %>" alt="<%= foundRecipe.img %>">
+            <h2>
+                Nom: <%= foundRecipe.name%>
+            </h2>
+            <%if (foundRecipe.author){%>
+                <h3>
+                    Auteur: <%= foundRecipe.author%>
+                </h3>
+                <%}%>
+
+                    <p>Temps de préparation <%= foundRecipe.preparationTime%>mn
+
+                            <% if (foundRecipe.preparationTime> 30){%>
+                                <strong>longue cuisson</strong>
+                                <%}%>
+
+                    </p>
+
+
+                    <ul>
+                        <% foundRecipe.ingredients.forEach(function(ingredient) { %>
+                            <li>
+                                <%= ingredient%>
+                            </li>
+                            <%})%>
+                    </ul>
+
+
+
+        </div>
+
+    </main>
+
+
+    <%- include('./partials/footer.ejs') %>
